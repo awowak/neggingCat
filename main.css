@@ -1,0 +1,154 @@
+body {
+	margin: 0;
+	margin-top: 70px;
+	background-color: #00A595;
+	background-image: url(http://www.transparenttextures.com/patterns/mirrored-squares.png);
+}
+
+nav {
+	position: fixed;
+	background-color: #39F2DF;
+	width:100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav > ul > li {
+	display: inline-block;
+	padding: 10;
+}
+
+nav li{
+	display: inline-block;
+	padding: 0 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	vertical-align: top;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+#menu-button {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+
+h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #FF7B3D;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+
+form {
+	position: relative;
+	float: left;
+	z-index: 2;
+	margin-top: -175px;
+	width:300px;
+	padding: 0px 90px;
+
+}
+
+#query {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 310px;
+	height: 30px;
+</div>
+}
+
+#catInfo {
+	width: 310px;
+	height: 30px;
+}
+
+#para {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #14141f;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 0;
+}
+
+#address {
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #14141f;
+	padding: 0;
+	margin-left: 20px;
+}
+
+.current {
+	text-decoration: underline;
+}
+
+section {
+	margin-top: -50px;
+	padding-top: 50px;
+}
+
+nav button {
+	display: none;
+}
+
+@media(max-width: 768px) {
+	nav > ul > li {
+		display: block;
+	}
+	#menu-button {
+		display: block;
+	}
+	nav ul {
+		display: none;
+		text-align: right;
+	}
+
+	body {
+		margin-top: 0;
+	}
+
+	h1	{
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #ff0066;
+		font-size: 20px;
+		padding-top: 90px;
+		padding-left: 15px;
+}
+
+.home1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	height:600px;
+}
+
+/*	nav ul ul {
+		position: static;
+	}
+
+	nav ul ul li {
+		padding: 0;
+		font-size: .8em;
+		display: none;
+		list-style-type: none;
+	}*/
+
+
+section {
+	background: cover;
+	background-attachment: fixed;
+	height: 1000px;
+}
+
