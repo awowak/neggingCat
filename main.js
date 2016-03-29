@@ -1,3 +1,5 @@
+	
+
 	(function($, window, document, undefined) {
 
   // our plugin constructor
@@ -29,27 +31,19 @@
     },
 
     init: function() {
-      // Introduce defaults that can be extended either
-      // globally or using an object literal.
       this.config = $.extend({}, this.defaults, this.options, this.metadata);
 
       this.$nav = this.$elem.find(this.config.navItems);
-
-      //Filter any links out of the nav
       if (this.config.filter !== '') {
         this.$nav = this.$nav.filter(this.config.filter);
       }
 
-      //Handle clicks on the nav
       this.$nav.on('click.onePageNav', $.proxy(this.handleClick, this));
 
-      //Get the section positions
       this.getPositions();
 
-      //Handle scroll changes
       this.bindInterval();
 
-      //Update the positions on resize too
       this.$win.on('resize.onePageNav', $.proxy(this.getPositions, this));
 
       return this;
@@ -126,7 +120,6 @@
       var newLoc = '#' + self.getHash($link);
 
       if (!$parent.hasClass(self.config.currentClass)) {
-        //Start callback
         if (self.config.begin) {
           self.config.begin();
         }
@@ -230,11 +223,11 @@ $("#catInfo").bind("keyup", function () {
 
 $("#clickIt").click(function () {
 	$("#query").fadeOut();
-  	$("#behaveDrop").fadeIn();
-		var behaviorDefined = ["Your cat thinks your mother was a hamster and your father smelled of elderberries. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your face and your throat. Oh, wait. Of course, it’s your face.", "Your cat believes you are an empty-headed animal food trough wiper. And your cat is correct. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your stomach and your thigh. Oh, wait. Of course, it’s your face.", "Your cat is trying to tell you to go get your shine box. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your throat and your calf. Oh, wait. Of course, it’s your face.", "Your cat thinks you thinks you are a stuck up, half-witted, scruffy looking nerfherder. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your face and your heart. Oh, wait. Of course, it’s your face.", "Your cat takes you for a dirt-eating piece of slime, a scum-sucking pig, and a son of a motherless goat. While uncertain as to how you are able to be all of these things at once, your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your heart and your lower intestine. Oh, wait. Of course, it’s your face.", "Your cat thinks you are a virgin who can’t drive. Your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your thigh and your small intestine. Oh, wait. Of course, it’s your face.", "Your cat is drinking your milkshake. Your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat’s unwavering stare is what it is using to make the Sophie’s choice between your brain and your throat. Oh, wait. Of course, it’s your face.", "Your cat is not negging you; it is just aloof."];
+  	$("#behaveDrop").slideDown();
+		var behaviorDefined = ["Your cat thinks your mother was a hamster and your father smelled of elderberries. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your face and your throat. Oh, wait. Of course, it's your face.", "Your cat believes you are an empty-headed animal food trough wiper. And your cat is correct. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your stomach and your thigh. Oh, wait. Of course, it's your face.", "Your cat is trying to tell you to go get your shine box. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your throat and your calf. Oh, wait. Of course, it's your face.", "Your cat thinks you are a stuck up, half-witted, scruffy looking nerfherder. This means your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your face and your heart. Oh, wait. Of course, it's your face.", "Your cat takes you for a dirt-eating piece of slime, a scum-sucking pig, and a son of a motherless goat. While uncertain as to how you are able to be all of these things at once, your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your heart and your lower intestine. Oh, wait. Of course, it's your face.", "Your cat thinks you are a virgin who can't drive. Your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your thigh and your small intestine. Oh, wait. Of course, it's your face.", "Your cat is drinking your milkshake. Your cat is almost certainly negging you and is deciding what part of your body to eat first when you die. Your cat's unwavering stare is what it is using to make the Sophie's choice between your brain and your throat. Oh, wait. Of course, it's your face.", "Your cat is not negging you; it is just aloof."];
 		var definition = behaviorDefined[Math.floor(Math.random()*behaviorDefined.length)];
 			result = definition;
-		document.getElementById("behave").innerHTML.result;
+		document.getElementById("behave").innerHTML=result;
 
 	});
 // });
