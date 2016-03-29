@@ -1,104 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="main.css">
-	<title></title>
-</head>
 
-<body>
-	<button id="menu-button"><img src="images/catIcon.png"></button>
-	<nav>
-		<ul>
-			<li class="current"><a href="#home">home</a></li>
-			<li><a href="#about">about</a></li>
-			<li><a href="#contact">contact</a></li>
-		</ul>
-	</nav>
-	
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title></title>
+  </head>
 
-	<div id="home1">
-	<section id="home">
-			<img src="images/catNoBg.gif" alt="catGIF">
-	</div>
-	<div id="query">
-		<form>
-			<input id="catInfo" type="text" placeholder="describe behavior here">
-			<button type="button" id="clickIt">a-go-go</button>
-		</form>
-	</div>
+  <body>
+    <button id="menu-button">&#9776</button>
+    <nav>
+      <ul>
+        <li class="current"><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
 
-	<div id="response">
-		
-	</div>
 
-	</section>
+    <div id="home1">
+      <section id="home">
+        <img src="images/catNoBg.gif" alt="catGIF">
+    </div>
+    <div id="query">
+      <form>
+        <input id="catInfo" type="text" placeholder="describe behavior here">
+        <button type="button" id="clickIt">a-go-go</button>
+      </form>
+    </div>
 
-	<section id="about">
-		<h1>about</h1>
-			<p id="para">Do you have a cat? Are you sometimes unsure as to if your cat is just aloof or if your cat is, indeed, negging you?</p>
-			<p id="para">Will you ever win your cat's love?</p>
-			<p id="para">Will you?</p>
-			<p id="para">Hmm?</p>
-			<p id="para">Do you think? </p>
-			<p id="para">Maybe? </p>
-			<p id="para">Maybe if you? </p>
-			<p id="para">No, what about . . . ? </p>
-			<p id="para">If you just tried to . . . ? </p>
-			<p id="para">Huh. What about. . . ? </p>
-			<p id="para">. . . </p>
-			<p id="para">. . . </p>
-			<p id="para">Well, in the immortal words of those funky divas, En Vogue. . . </p>
-			<p id="para">never gonna get it, never gonna get it, never gonna get it</p>
-			<p id="para">(no, not this time)</p>
-			<p id="para">. . .well, maybe. That "maybe" is what keeps us all going.</p>
+    <div id="behaveDrop">
+      <p id="behave">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos laboriosam, optio provident, sint incidunt aliquam harum. Nam, consequuntur dolores, nihil dicta assumenda, laborum, veniam cumque eum facilis ratione ullam totam.</p>
+    </div>
 
-	</section>
+    </section>
 
-	<section id="contact">
-		<h1>contact</h1>
-			<p id="para">Contact www.ismycatneggingme.com at:</p>
-			<p id="address">177A Bleecker Street</p>
-			<p id="address">New York, NY 10012</p>
-			<p id="address">T: 212.576.4000</p>
-			<p id="address">F: 212.576.8506</p>
-			<p id="address">E: yourcat@ismycatneggingme.com</p>
-	</section>
+    <section id="about">
+      <h1>about</h1>
+      <p id="para">Do you have a cat? Are you sometimes unsure as to if your cat is just aloof or if your cat is, indeed, negging you?</p>
+      <p id="para">Will you ever win your cat's love?</p>
+      <p id="para">Will you?</p>
+      <p id="para">Hmm?</p>
+      <p id="para">Do you think? </p>
+      <p id="para">Maybe? </p>
+      <p id="para">Maybe if you? </p>
+      <p id="para">No, what about . . . ? </p>
+      <p id="para">If you just tried to . . . ? </p>
+      <p id="para">Huh. What about. . . ? </p>
+      <p id="para">. . . </p>
+      <p id="para">. . . </p>
+      <p id="para">Well, in the immortal words of those funky divas, En Vogue. . . </p>
+      <p id="para">never gonna get it, never gonna get it, never gonna get it</p>
+      <p id="para">(no, not this time)</p>
+      <p id="para">. . .well, maybe. That "maybe" is what keeps us all going.</p>
 
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </section>
 
-<script type="text/javascript" src="main.js"></script>
+    <section id="contact">
+      <h1>contact</h1>
+      <p id="para">Contact www.ismycatneggingme.com at:</p>
+      <p id="address">177A Bleecker Street</p>
+      <p id="address">New York, NY 10012</p>
+      <p id="address">T: 212.576.4000</p>
+      <p id="address">F: 212.576.8506</p>
+      <p id="address">E: yourcat@ismycatneggingme.com</p>
+    </section>
 
-<script>
-	$('nav').onePageNav({
-		scrollThreshold: 0.4,
-		navItems:'a:not(.submenu a)'
-	});
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-	function toggleNav () {
-		$('nav ul').slideToggle();
-	}
+    <script type="text/javascript" src="main.js"></script>
 
-	$('#menu-button').click(toggleNav);
+  </body>
 
-	function windowResized() {
-				var width = $(window).width();
-				var menu = $('nav ul');
-				if(width > 768 && menu.is(':hidden')) {
-					menu.removeAttr('style');
-				}
-			}
-
-	$(window).resize(windowResized);
-
-	function toggleChildren(event) {
-		event.preventDefault();
-		$('nav ul ul li').slideToggle();
-	}
-
-	$('#blogLink').click(toggleChildren); 
-
-</script>
-   
-</body>
 </html>
